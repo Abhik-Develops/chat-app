@@ -33,7 +33,7 @@ const ProfileModal = ({user, children}) => {
             </DialogTitle>
             <DialogContent sx={{scrollbarWidth: 'none'}}>
                 <Typography variant='h4' sx={{fontFamily:'Work sans', textAlign: 'center', whiteSpace: 'nowrap', overflow:'auto', scrollbarWidth: 'none', mb: 1}}>{user.name}</Typography>
-                <Box component="img" alt={user.name} src={user.pic} sx={{height: 'auto', maxHeight: {lg: '700px', md: '600px', sm: '500px', xs: '400px'}, width: '100%', maxWidth: '500px'}} />
+                <Box component="img" alt={user.name} src={user.pic} sx={{height: 'auto', maxHeight: 'calc(100vh - (100px + 150px))', width: '100%', maxWidth: '500px'}} />
                 <Typography sx={{fontSize: {xs: '28px', md: '30px'}, textAlign: 'center', fontFamily: 'Work sans', whiteSpace: 'nowrap', overflow: 'auto', scrollbarWidth: 'none'}}>Email : {user.email}</Typography>
             </DialogContent>
         </Dialog>

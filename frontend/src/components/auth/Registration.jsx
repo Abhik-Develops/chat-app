@@ -58,7 +58,7 @@ const Registration = () => {
             setConfirmpassword('');
             setError({
                 status: true,
-                msg: "Verification link sent to your email. Please verify your account. Refresh the page after verification.",
+                msg: "Verification link sent to your email. Please verify your email.",
                 type: "success",
             });
             setLoading(false);

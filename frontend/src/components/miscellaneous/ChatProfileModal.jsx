@@ -26,7 +26,7 @@ const ChatProfileModal = ({name, pic, children}) => {
                 </IconButton>
             </DialogTitle>
             <DialogContent>
-                <Box component="img" alt={name} src={pic} sx={{height: 'auto', maxHeight: {lg: '700px', md: '600px', sm: '500px', xs: '400px'}, width: '100%', maxWidth: '500px'}}/>
+                <Box component="img" alt={name} src={pic} sx={{height: 'auto', maxHeight: 'calc(100vh - (100px + 150px))', width: '100%', maxWidth: '500px'}}/>
             </DialogContent>
         </Dialog>
     </>

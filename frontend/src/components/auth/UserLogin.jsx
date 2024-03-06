@@ -42,7 +42,7 @@ const UserLogin = () => {
             setPassword('');
             setError({
                 status: true,
-                msg: "Login Successful. Redirecting to chats page...",
+                msg: "Login Successful.",
                 type: "success",
             });
             localStorage.setItem('userInfo', JSON.stringify(data));
