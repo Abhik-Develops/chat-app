@@ -44,9 +44,9 @@ const MyChats = ({fetchAgain}) => {
   },[fetchAgain])
   return (
     <Box sx={{display: {xs: selectedChat ? "none" : "flex", md: "flex"}, flexDirection: 'column', alignItems: 'center', p: 3, bgcolor: 'white', width: {xs:"100%", md:"31%"}, borderRadius: '10px', border: "1px"}}>
-      <Box sx={{py: 3, fontSize: {xs:'28px', md:'30px'}, fontFamily: 'Work sans', display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
+      <Box sx={{fontSize: {xs:'28px', md:'30px'}, fontFamily: 'Work sans', display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
         <NewGroupChatModal>
-          <Button variant='outlined' color='info' fullWidth startIcon=<AddIcon/> sx={{display: 'flex', fontSize: {xs: '17px', md: '17px', lg: '20px'}}}>
+          <Button variant='outlined' size='large' fullWidth startIcon=<AddIcon/>>
             New Group Chat
           </Button>
         </NewGroupChatModal>
@@ -56,7 +56,7 @@ const MyChats = ({fetchAgain}) => {
           msg: error.msg,
           type: error.type,
       });}}>{error.msg}</Alert> : ''}
-      <Box sx={{display: 'flex', flexDirection: 'column', pb: 3, bgcolor: 'F8F8F8', width: '100%', h: '100%', borderRadius: '10px', overflowY: 'hidden'}}>
+      <Box sx={{display: 'flex', flexDirection: 'column', py: 3, bgcolor: 'F8F8F8', width: '100%', h: '100%', borderRadius: '10px', overflowY: 'hidden'}}>
         {chats ? 
           <Stack sx={{overflowY: 'scroll', '::-webkit-scrollbar': {display: 'none'}}} spacing={2}>
             {chats.map((chat)=>{

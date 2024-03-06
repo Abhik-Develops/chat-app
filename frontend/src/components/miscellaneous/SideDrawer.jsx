@@ -76,7 +76,6 @@ const SideDrawer = () => {
         type: "",
     })
     const handleSearch = async (e) => {
-        console.log(e.key)
         if(e.key === 'Enter' || e.type === 'click'){
             if(!search){
                 setError({
@@ -134,7 +133,7 @@ const SideDrawer = () => {
         <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: 'white', width: '100%', p: "5px 10px 5px 10px", border: '5px'}}>
             <Tooltip title="Search Users to Chat" arrow placement="bottom-end">
                 <Button onClick={() => setOpenDrawer(true)} startIcon=<Search/> sx={{color:'black'}}>
-                    <Typography display={{xs:'none', md:'flex'}} sx={{px:'4px'}}>
+                    <Typography sx={{px:'4px', display: {xs: 'none', md: 'flex'}}}>
                         Search User
                     </Typography>
                 </Button>
@@ -251,7 +250,7 @@ const SideDrawer = () => {
                     })}
                 </Stack>
             }
-            {loadingChat && <CircularProgress/>}
+            {loadingChat && <CircularProgress thickness={2} sx={{mx: 'auto', color: 'black'}}/>}
       </Drawer>
     </>
   )

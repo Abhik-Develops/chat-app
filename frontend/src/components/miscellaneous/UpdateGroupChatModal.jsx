@@ -361,7 +361,7 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages, childre
             <Divider/>
             <DialogContent sx={{scrollbarWidth: 'none'}}>
                 <Stack spacing={2}>
-                    <Box component="img" alt={selectedChat.chatName} src={pic ? pic : selectedChat.chatPic} sx={{height: 'auto', width: '100%', maxWidth: '500px'}} />
+                    <Box component="img" alt={selectedChat.chatName} src={pic ? pic : selectedChat.chatPic} sx={{height: 'auto', maxHeight: {lg: '700px', md: '600px', sm: '500px', xs: '400px'}, width: '100%', maxWidth: '500px'}} />
                     <TextField type='file' id="pic" name="pic" fullWidth label="Upload New Group Image" onChange={handlePic} InputProps={{startAdornment: <InputAdornment position="start"><PortraitIcon /></InputAdornment>, endAdornment: <InputAdornment position='end'><LoadingButton loading={loadingPic} variant='contained' disableElevation onClick={handleSubmitPic}>Save</LoadingButton></InputAdornment>}} inputProps={{accept: 'image/*'}}/>
                     {errorPic.status ? <Alert severity={errorPic.type} onClose={() => {setErrorPic({
                         status: false,

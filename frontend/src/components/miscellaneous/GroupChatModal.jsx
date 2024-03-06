@@ -124,7 +124,7 @@ const GroupChatModal = ({fetchAgain, setFetchAgain, children}) => {
                 </IconButton>
             </DialogTitle>
             <DialogContent sx={{scrollbarWidth:'none'}}>
-                <Box component="img" alt={selectedChat.chatName} src={selectedChat.chatPic} sx={{height: 'auto', width: '100%', maxWidth: '500px'}} />
+                <Box component="img" alt={selectedChat.chatName} src={selectedChat.chatPic} sx={{height: 'auto', maxHeight: {lg: '700px', md: '600px', sm: '500px', xs: '400px'}, width: '100%', maxWidth: '500px'}} />
                 <Typography variant='h4' sx={{fontFamily:'Work sans', textAlign: 'center', overflow:'auto', scrollbarWidth: 'none'}}>{selectedChat.chatName}</Typography>
                 <Divider sx={{my: 1}}/>
                 <Typography variant='body2' sx={{fontFamily: 'Work sans', fontSize: {xs: '15px', md: '17px'}, textAlign: 'center', overflow: 'auto', scrollbarWidth: 'none'}}>{selectedChat.chatDesc}</Typography>

@@ -204,7 +204,7 @@ const EditProfileModal = ({children}) => {
                         msg: errorName.msg,
                         type: errorName.type,
                     });}}>{errorName.msg}</Alert> : ''}
-                    <Box component="img" alt={user.name} src={pic ? pic : user.pic} sx={{height: 'auto', width: '100%', maxWidth: '500px'}} />
+                    <Box component="img" alt={user.name} src={pic ? pic : user.pic} sx={{height: 'auto', maxHeight: {lg: '700px', md: '600px', sm: '500px', xs: '400px'}, width: '100%', maxWidth: '500px'}} />
                     <TextField type='file' id="pic" name="pic" fullWidth label="Upload New Image" onChange={handlePic} InputProps={{startAdornment: <InputAdornment position="start"><PortraitIcon /></InputAdornment>, endAdornment: <InputAdornment position='end'><LoadingButton loading={loadingPic} variant='contained' disableElevation onClick={handleSubmitPic}>Save</LoadingButton></InputAdornment>}} inputProps={{accept: 'image/*'}}/>
                     {errorPic.status ? <Alert severity={errorPic.type} onClose={() => {setErrorPic({
                         status: false,

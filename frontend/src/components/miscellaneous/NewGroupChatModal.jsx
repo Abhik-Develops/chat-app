@@ -121,6 +121,7 @@ const NewGroupChatModal = ({children}) => {
           noValidate: true,
           onSubmit: handleSubmit,
         }}
+        fullWidth
       >
         <DialogTitle sx={{fontFamily:'Work sans', textAlign: 'center'}}>
           Create New Group Chat
@@ -134,7 +135,11 @@ const NewGroupChatModal = ({children}) => {
                 return <UserBadgeItem key={u._id} user={u} handleFunction={()=>handleDelete(u)} />
               })}
             </Box>
-            {loading ? (<CircularProgress/>) : (
+            {loading ? (
+              <Stack sx={{alignItems: 'center'}}>
+                <CircularProgress/>
+              </Stack>
+              ) : (
               <Stack spacing={1}>
                   {
                       searchResult?.slice(0,4).map((user)=>{
